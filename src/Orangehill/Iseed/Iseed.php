@@ -193,6 +193,7 @@ class Iseed
     public function generateClassName($table, $prefix=null, $suffix=null)
     {
         $tableString = '';
+        $table = str_replace('.', '_', $table);
         $tableName = explode('_', $table);
         foreach ($tableName as $tableNameExploded) {
             $tableString .= ucfirst($tableNameExploded);
